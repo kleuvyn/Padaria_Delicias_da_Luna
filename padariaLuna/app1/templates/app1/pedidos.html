@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Pedidos</title>
+</head>
+<body>
+    <header  class="menu">
+        <nav>
+              <ul class="barraMenu">
+                
+              <a href="index.html">
+                <img src="https://img.icons8.com/?size=256&id=KIoFrHf2_G3_&format=png" alt="Logo" width="80px">
+              </a>\
+
+              
+        
+              <li>
+                <a href="quemSomos.html">Quem Somos</a>
+              </li>
+      
+              <li>
+                <a href="qualidade.html">Compromisso com a Qualidade</a>
+              </li>
+      
+              <li>
+                <a href="visite-nos.html">Visite-nos</a>
+              </li> 
+
+              <li>
+                <a href="cardapio.html">Cardápio</a>
+              </li>
+
+              <li>
+                <a href="pedidos.html">Pedidos</a>
+              </li>
+
+              <li>
+                <a href="contato.html">Contate-nos</a>
+              </li>
+            </ul>
+
+          </nav>
+    </header>
+
+
+    <main>
+
+        <div>
+            <img class="imagem" src="https://images.unsplash.com/photo-1579697096985-41fe1430e5df?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBhZGFyaWF8ZW58MHx8MHx8fDA%3D"/>
+          </div>
+      
+
+        <div >
+        <h3 class="tiluloPedido">Faça Seus Pedidos</h3>
+        </div>
+
+        <section id="pedidos">
+
+            <div class="opcoes">
+               
+                <button onclick="mostrarCategoria('paesFrescos')">Pães Frescos</button>
+
+                <button onclick="mostrarCategoria('docesSalgados')">Doces e Salgados</button>
+
+                <button onclick="mostrarCategoria('sanduiches')">Sanduíches</button>
+
+                <button onclick="mostrarCategoria('cafesQualidade')">Cafés de Qualidade</button>
+
+                <button onclick="mostrarCategoria('bebidas')">Bebidas</button>
+
+            </div>
+
+            <div id="categorias">
+
+                <div id="paesFrescos">
+                    <h4>Pães Frescos</h4>
+                    <ul>
+                        <li><input type="checkbox" name="pao" value="Baguete - $2.50"> Baguete - $2.50</li>
+                        <li><input type="checkbox" name="pao" value="Chapata Italiana - $3.00"> Chapata Italiana - $3.00</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Cereais - $2.75"> Pão de Cereais - $2.75</li>
+                        <li><input type="checkbox" name="pao" value="Pão Integral - $2.50"> Pão Integral - $2.50</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Alho - $3.25"> Pão de Alho - $3.25</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Nozes - $3.50"> Pão de Nozes - $3.50</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Azeitonas - $3.25"> Pão de Azeitonas - $3.25</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Centeio - $3.00"> Pão de Centeio - $3.00</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Ervas - $3.25"> Pão de Ervas - $3.25</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Milho - $2.75"> Pão de Milho - $2.75</li>
+                        <li><input type="checkbox" name="pao" value="Pão de Batata - $2.50"> Pão de Batata - $2.50</li>
+                        
+                    </ul>
+                </div>
+
+                <div id="docesSalgados">
+                    <h4>Doces e Salgados</h4>
+                    <ul>
+                        <li><input type="checkbox" name="doce" value="Bolo de Chocolate - $3.50"> Bolo de Chocolate - $3.50</li>
+                        <li><input type="checkbox" name="doce" value="Croissant de Amêndoa - $2.00"> Croissant de Amêndoa - $2.00</li>
+                        <li><input type="checkbox" name="doce" value="Quiche de Espinafre - $4.00"> Quiche de Espinafre - $4.00</li>
+                        <li><input type="checkbox" name="doce" value="Pão de Queijo - $1.50"> Pão de Queijo - $1.50</li>
+                        <li><input type="checkbox" name="doce" value="Pão de Chocolate - $2.50"> Pão de Chocolate - $2.50</li>
+                        <li><input type="checkbox" name="doce" value="Bolo de Morango - $3.75"> Bolo de Morango - $3.75</li>
+                        <li><input type="checkbox" name="doce" value="Empada de Frango - $2.25"> Empada de Frango - $2.25</li>
+                        <li><input type="checkbox" name="doce" value="Torta de Maçã - $3.50"> Torta de Maçã - $3.50</li>
+                        
+                       
+                    </ul>
+                </div>
+
+                <div id="sanduiches">
+                    <h4>Sanduíches</h4>
+                    <ul>
+                    <li><input type="checkbox" name="sanduiche" value="Sanduíche de Frango Grelhado - $5.50"> Sanduíche de Frango Grelhado - $5.50</li>
+                    <li><input type="checkbox" name="sanduiche" value="Sanduíche de Peru e Abacate - $6.00"> Sanduíche de Peru e Abacate - $6.00</li>
+                    <li><input type="checkbox" name="sanduiche" value="Sanduíche Caprese - $4.50"> Sanduíche Caprese - $4.50</li>
+                    <li><input type="checkbox" name="sanduiche" value="Sanduíche de Salame e Queijo - $5.25"> Sanduíche de Salame e Queijo - $5.25</li>
+
+                    </ul>
+                </div>
+
+                <div id="cafesQualidade">
+                    <h4>Cafés de Qualidade</h4>
+                    <ul>
+                        <li><input type="checkbox" name="cafe" value="Espresso - $1.50"> Espresso - $1.50</li>
+                        <li><input type="checkbox" name="cafe" value="Cappuccino - $3.00"> Cappuccino - $3.00</li>
+                        <li><input type="checkbox" name="cafe" value="Café com Leite - $2.00"> Café com Leite - $2.00</li>
+                        <li><input type="checkbox" name="cafe" value="Mocha - $3.25"> Mocha - $3.25</li>
+                        <li><input type="checkbox" name="cafe" value="Affogato - $4.00"> Affogato - $4.00</li>
+                        
+                    </ul>
+                </div>
+              
+                <div id="bebidas">
+                    <h4>Bebidas</h4>
+                    <ul>
+                        <li><input type="checkbox" name="bebida" value="Suco de Laranja Natural - $2.50"> Suco de Laranja Natural - $2.50</li>
+                        <li><input type="checkbox" name="bebida" value="Chá Verde - $1.50"> Chá Verde - $1.50</li>
+                        <li><input type="checkbox" name="bebida" value="Refrigerantes - $1.75"> Refrigerantes - $1.75</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="informacoes">
+            <h3>Informações Adicionais</h3>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <br>
+                <label for="observacao">Observações Especiais:</label>
+                <textarea id="observacao" name="observacao" rows="10" style="width: 100%;"></textarea>
+
+                <br>
+                <label for="endereco">Endereço de Entrega:</label>
+                <input type="text" id="endereco" name="endereco">
+                <br>
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select id="pagamento" name="pagamento">
+                    <option value="pix">Pix</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="cartao">Cartão de Debito</option>
+                </select>
+            </form>
+        </section>
+        
+        <section id="total">
+            <h3>Total do Pedido</h3>
+            <p id="total-valor">$0.00</p>
+            <button id="confirmar-pedido">Confirmar Pedido</button>
+        </section>
+    
+    </main>
+
+
+
+    
+    <div class="modal">
+        <div class="content">
+            <h1 class="title">Obrigada pela preferencia!</h1>
+            <p id="texto-modal" class="paragrafo-modal"></p>
+            <br>
+            <h5>Pagamento será realizado na entrega do Pedido</h5>
+            <button class="modalBtn">Confirmar</button>
+        </div>
+    </div>
+
+
+    <footer>
+        &copy; 2023 Padaria Delícias da Luna
+    </footer>
+
+  
+</body>
+</html>
