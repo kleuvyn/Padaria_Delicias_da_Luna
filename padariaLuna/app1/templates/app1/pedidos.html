@@ -6,45 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'app1/css/style.css' %}">
     <script src="{% static 'app1/js/script.js' %}"></script>
+    <title>Pedidos</title>
 
 <body>
-  <header  class="menu">
-    <nav>
-          <ul class="barraMenu">
-            
-          <a href="index">
-            <img src="https://img.icons8.com/?size=256&id=KIoFrHf2_G3_&format=png" alt="Logo" width="80px">
-          </a>
-
-          
+    <header  class="menu">
+        <nav>
+              <ul class="barraMenu">
+                
+              <a href="/">
+                <img src="https://img.icons8.com/?size=256&id=KIoFrHf2_G3_&format=png" alt="Logo" width="80px">
+              </a>
     
-          <li>
-            <a href="quemSomos">Quem Somos</a>
-          </li>
-  
-          <li>
-            <a href="qualidade">Compromisso com a Qualidade</a>
-          </li>
-  
-          <li>
-            <a href="visite-nos">Visite-nos</a>
-          </li> 
-
-          <li>
-            <a href="cardapio">Cardápio</a>
-          </li>
-
-          <li>
-            <a href="pedidos">Pedidos</a>
-          </li>
-
-          <li>
-            <a href="contato">Contate-nos</a>
-          </li>
-        </ul>
-
-      </nav>
-</header>
+            
+        
+              <li>
+                <a href="/quem-somos">Quem Somos</a>
+              </li>
+      
+              <li>
+                <a href="/qualidade">Compromisso com a Qualidade</a>
+              </li>
+      
+              <li>
+                <a href="/visite-nos">Visite-nos</a>
+              </li> 
+    
+              <li>
+                <a href="/cardapio">Cardápio</a>
+              </li>
+    
+              <li>
+                <a href="/pedidos">Pedidos</a>
+              </li>
+    
+              <li>
+                <a href="/contato">Contate-nos</a>
+              </li>
+    
+              <li>
+                <a href="/login">Login</a>
+              </li>
+            
+            </ul>
+    
+          </nav>
+    </header>
+    
 
     <main>
 
@@ -145,13 +152,15 @@
 
         <section id="informacoes">
             <h3>Informações Adicionais</h3>
-            <form>
+            <form method="post" action="{% url 'processar_pedido' %}">
+                {% csrf_token %}
+        
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome">
                 <br>
                 <label for="observacao">Observações Especiais:</label>
                 <textarea id="observacao" name="observacao" rows="10" style="width: 100%;"></textarea>
-
+        
                 <br>
                 <label for="endereco">Endereço de Entrega:</label>
                 <input type="text" id="endereco" name="endereco">
@@ -161,16 +170,18 @@
                     <option value="pix">Pix</option>
                     <option value="dinheiro">Dinheiro</option>
                     <option value="cartao">Cartão de Crédito</option>
-                    <option value="cartao">Cartão de Debito</option>
+                    <option value="cartao">Cartão de Débito</option>
                 </select>
+        
+                <br>
+                <section id="total">
+                    <h3>Total do Pedido</h3>
+                    <p id="total-valor">$0.00</p>
+                    <button type="submit" name="confirmar_pedido">Confirmar Pedido</button>
+                </section>
             </form>
         </section>
         
-        <section id="total">
-            <h3>Total do Pedido</h3>
-            <p id="total-valor">$0.00</p>
-            <button id="confirmar-pedido">Confirmar Pedido</button>
-        </section>
     
     </main>
 
@@ -185,6 +196,9 @@
             <h5>Pagamento será realizado na entrega do Pedido</h5>
             <button class="modalBtn">Confirmar</button>
         </div>
+     
+        <a href="{% url 'processar_pedido' %}">Novo Pedido</a>
+
     </div>
 
 

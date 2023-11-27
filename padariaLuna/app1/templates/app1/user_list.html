@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+</head>
+
+<header  class="menu">
+    <nav>
+          <ul class="barraMenu">
+            
+          <a href="/">
+            <img src="https://img.icons8.com/?size=256&id=KIoFrHf2_G3_&format=png" alt="Logo" width="80px">
+          </a>
+
+        
+    
+          <li>
+            <a href="/quem-somos">Quem Somos</a>
+          </li>
+  
+          <li>
+            <a href="/qualidade">Compromisso com a Qualidade</a>
+          </li>
+  
+          <li>
+            <a href="/visite-nos">Visite-nos</a>
+          </li> 
+
+          <li>
+            <a href="/cardapio">Cardápio</a>
+          </li>
+
+          <li>
+            <a href="/pedidos">Pedidos</a>
+          </li>
+
+          <li>
+            <a href="/contato">Contate-nos</a>
+          </li>
+
+          <li>
+            <a href="/login">Login</a>
+          </li>
+        
+        </ul>
+
+      </nav>
+</header>
+<body>
+    <h1>Lista de Usuários</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
