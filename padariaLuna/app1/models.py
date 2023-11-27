@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser, BaseUserManager, Group, Permission
 from django.db import models
+
 from django.utils.translation import gettext_lazy as _
 
 class CustomUserManager(BaseUserManager):
@@ -18,8 +19,8 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 class CustomUser(AbstractUser):
+    objects = CustomUserManager()
     email = models.EmailField(unique=True)
-    # Adicione o related_name aqui
     groups = models.ManyToManyField(Group, verbose_name=_('groups'), blank=True, related_name='customuser_set')
     user_permissions = models.ManyToManyField(
         Permission,
@@ -28,10 +29,6 @@ class CustomUser(AbstractUser):
         related_name='customuser_set',
         help_text=_('Specific permissions for this user.')
     )
-
- 
-
-    objects = CustomUserManager()
 
 class Pedido(models.Model):
     usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
@@ -42,4 +39,3 @@ class Pedido(models.Model):
 
     def __str__(self):
         return f"Pedido de {self.usuario.username} - {self.nome}"
-

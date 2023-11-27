@@ -9,56 +9,98 @@ main {
     margin-bottom: 70px;
 }
 
+
+
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border-radius: 30px;
-    width: 50%;
-    font-size: 22px;
-    font-family: 'LexendDeca-Regular';
-    color: #0F3D19;
-    align-items: center;
 }
 
 .login-form label {
-    display: block;
-    margin-bottom: 10px;
-    color: #64946D;
-    }
+    margin-bottom: 8px;
+    font-weight: bold;
+}
 
 .login-form input {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #64946D;
-    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .login-form button {
-    height: 5vh;
-    min-height: 30px;
-    width: 15vh;
-    min-width: 130px;
-    border-radius: 5px;
-    border: 0;
-    outline: 0;
-    background-color: #007119;
-    font-size: 20px;
+    padding: 10px;
+    background-color: #4caf50;
     color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 .login-form button:hover {
-    background-color: #0F3D19;
+    background-color: #45a049;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cadastro-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.cadastro-form input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cadastro-form button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cadastro-form button:hover {
+    background-color: #45a049;
+}
+
 
 .textoInicio{
     margin: 45px;

@@ -75,16 +75,11 @@ WSGI_APPLICATION = 'padariaLuna.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# padariaLuna/settings.py
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PadariaLuna',   # Nome do banco de dados no MySQL
-        'USER': 'admin',  # Seu nome de usuário do MySQL
-        'PASSWORD': 'password',  # Sua senha do MySQL
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -131,10 +126,12 @@ STATICFILES_DIRS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-# Defina a URL para redirecionamento durante o login
-LOGIN_URL = '/login/'
 
-# Defina a URL para redirecionamento durante o logout
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/index/'
+
 LOGOUT_URL = '/logout/'
+
+AUTH_USER_MODEL = 'app1.CustomUser'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
