@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'PadariaLuna',   # Nome do banco de dados no MySQL
-        'USER': 'root',  # Seu nome de usuário do MySQL
-        'PASSWORD': '',  # Sua senha do MySQL
+        'USER': 'admin',  # Seu nome de usuário do MySQL
+        'PASSWORD': 'password',  # Sua senha do MySQL
         'HOST': 'localhost',
         'PORT': '3306',
     }
